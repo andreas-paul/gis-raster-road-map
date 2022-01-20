@@ -31,7 +31,7 @@ This build process has been tested on Linux via WSL2 and Windows 10 (cmd; powers
 To build the Docker image, run the following command from within the repository:
 
 ```bash
-docker build -t paul_axelspace_assignment .
+docker build -t roadmap .
 ```
 
 The test suite will run during the build process, using _**pytest**_. If it fails, the Docker image build will fail as well. Please open an issue if this happens.
@@ -39,7 +39,7 @@ The test suite will run during the build process, using _**pytest**_. If it fail
 Once the build process is complete, run the Docker image with the following command:
 
 ```bash
-docker run --rm -i -v ${PWD}:/app -e AWS_ACCESS_KEY_ID=<access-key-id> -e AWS_SECRET_ACCESS_KEY=<secret-access-key> paul_axelspace_assignment
+docker run --rm -i -v ${PWD}:/app -e AWS_ACCESS_KEY_ID=<access-key-id> -e AWS_SECRET_ACCESS_KEY=<secret-access-key> roadmap
 ```
 
 Please do not forget to replace "access-key-id" and "secret-access-key" with valid AWS credentials. Without these, the program will download a backup file from my dropbox. 
@@ -59,7 +59,7 @@ conda env create -f environment.yml
 Activate the conda environment by running:
 
 ```bash
-conda activate paul_axelspace_assignment
+conda activate roadmap
 ```
 
 Once the environment is activated, run the following command from the main folder of the repository, to start the testing suite:
