@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     s3_bucket: str = 'landsat-pds'
 
     # Backup data repository on Dropbox
-    data_file: str = "https://www.dropbox.com/s/71twrk6py7jieo2/LC08_L1TP_044034_20210508_20210518_01_T1.zip?dl=1"
+    data_file: str = ""
 
     # Coordinate reference system (CRS)
     crs: str = '32610'

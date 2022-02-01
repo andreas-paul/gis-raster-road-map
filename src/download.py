@@ -120,7 +120,9 @@ def get_landsat_data(image_id: str = None,
 
     if not boto3.Session().get_credentials():
         log.warning("No AWS Credentials found. Switching to download from Dropbox.")
-        dl_from_dropbox(f"{work_dir}/landsat.zip")
+        # dl_from_dropbox(f"{work_dir}/landsat.zip")
+        log.error("Dropbox download disabled")
+        return
     else:    
         log.success("AWS Credentials found. Attempting download from AWS.")    
         try:
